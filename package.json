@@ -1,0 +1,19 @@
+{
+  "name": "gatsby-plugin-panelbear",
+  "description": "Add Panelbear tracking to your Gatsby site",
+  "main": "index.js",
+  "author": "jelkand",
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "panelbear",
+    "analytics"
+  ],
+  "dependencies": {
+    "react": "^17.0.1"
+  },
+  "files": [
+    "/dist"
+  ]
+}
