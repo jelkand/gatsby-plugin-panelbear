@@ -5,7 +5,8 @@ export const onRenderBody = ({ setHeadComponents }, pluginOptions) => {
 
   if (!siteID) console.error("Must provide a Panelbear Site ID.");
 
-  const snippet = `window.panelbear = window.panelbear || function(){ window.panelbearQ = window.panelbearQ || []; panelbearQ.push(arguments); };panelbear('config', { site: '${siteID}', spaMode: 'history' });`;
+  const snippet = `window.panelbear = window.panelbear || function(){ window.panelbearQ = window.panelbearQ || []; 
+      panelbearQ.push(arguments); };panelbear('config', { site: '${siteID}', spaMode: 'history' });`;
 
   setHeadComponents([
     <script

@@ -29,9 +29,11 @@ In your `gatsby-config.js` file, include:
 
 ## Options
 
-| Option   | Information                                                     |
-| -------- | --------------------------------------------------------------- |
-| `siteID` | Your Site ID as provided in the Site Settings page of Panelbear |
+| Option      | Required? | Default | Information                                                                                                                          |
+| ----------- | --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `siteID`    | yes       | n/a     | Your Site ID as provided in the Site Settings page of Panelbear.                                                                     |
+| `debug`     | no        | `false` | Write Panelbear log messages to the browser console and send events from localhost to panelbear. Please do not enable in production. |
+| `autoTrack` | no        | `true`  | By default, page events are sent when the route updates. Disable for finer grained control over when page view events are sent.      |
 
 ## Notes
 
