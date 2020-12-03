@@ -29,10 +29,24 @@ In your `gatsby-config.js` file, include:
 
 ## Options
 
-| Option   | Information                                                     |
-| -------- | --------------------------------------------------------------- |
-| `siteID` | Your Site ID as provided in the Site Settings page of Panelbear |
+| Option      | Required? | Default | Information                                                                                                                          |
+| ----------- | :-------: | :-----: | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `siteID`    |    yes    |   n/a   | Your Site ID as provided in the Site Settings page of Panelbear.                                                                     |
+| `debug`     |    no     | `false` | Write Panelbear log messages to the browser console and send events from localhost to panelbear. Please do not enable in production. |
+| `autoTrack` |    no     | `true`  | By default, page events are sent when the route updates. Disable for finer grained control over when page view events are sent.      |
 
 ## Notes
 
-Please see the [Panelbear Documentation](https://panelbear.com/docs/) for explanation of the Panelbear API
+**Custom Events**
+
+You can use `window.panelbear('track', 'MyCustomEvent')` to send an event. See the [Panelbear Docs](https://panelbear.com/docs/custom-events/) for information on the events API.
+
+**Use alongside Panelbear.js**
+
+Panelbear also provides an npm package for loading the script and interacting with Panelbear. This package is preferable to the plugin if you need types, or want to tailor Panelbear for your specific use case.
+
+For the time being, you _can_ use `panelbear-js` alongside this plugin. You can load the script through the plugin, and use the library for calls such as `Panelbear.track('MyEvent')`. Do _not_ call `Panelbear.load()` if you have the plugin installed. This **is not intentional functionality** and shouldn't be counted on in production.
+
+## FAQ and Docs
+
+Please see the [Panelbear Documentation](https://panelbear.com/docs/) for explanation of the Panelbear API.
